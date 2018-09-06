@@ -1,0 +1,120 @@
+.details-page, .child-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: fit-content;
+}
+
+.status {
+  padding: 0.8em 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.status span {
+  background-color: #006060;
+  padding: 0.6em 0 0.6em 2em;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  color: white;
+  font-family: 'Raleway';
+  letter-spacing: 0.1em;
+}
+
+.child-detail{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.details-page .name, .child-detail .name {
+  padding: 0.3em;
+  text-align: left;
+  margin: 0.3em 0.5em;
+  font-size: 1.1em;
+  display: flex;
+  flex-direction: column;
+  color: #006060;
+}
+
+.details-page .name span, .child-detail .name span {
+  color: #1f1f1f;
+  padding: 0.5em 0 0.3em 0;
+  font-size: 1.1em;
+}
+
+.approval-btns {
+  display: flex;
+  margin: 1.3em;
+  justify-content: space-around;
+}
+
+.approval-btns .approve, .approval-btns .deny {
+  padding: 0.4em;
+  font-size: 1em;
+  width: 40%;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  background-color: white;
+  text-transform: uppercase;
+}
+
+.approval-btns .approve {
+  color: #008000;
+}
+
+.approval-btns .deny {
+  color: #ef624b;
+}
+
+.modal-content .complete-task {
+  padding: 0.4em;
+  font-size: 1.0em;
+  cursor: pointer;
+  text-align: right;
+  margin: 1em;
+  color: #157e15;
+  border: none;
+  background: none;
+}
+
+.details-page .points, .child-detail .points {
+  padding: 0.3em;
+  text-align: left;
+  margin: 0.3em 0.5em;
+  font-size: 1.0em;
+  display: flex;
+  flex-direction: column;
+  color: #006060;
+
+}
+
+.details-page .points span, .child-detail .points span {
+  color:#1f1f1f;;
+  padding: 0.5em 0 0.3em 0;
+  font-size: 1.1em;
+}
+
+.details-page .expiry, .child-detail .expiry {
+  padding: 0.3em;
+  text-align: left;
+  margin: 0.3em 0.5em;
+  font-size: 1.1em;
+  display: flex;
+  flex-direction: column;
+  color: #006060;
+
+}
+.details-page .expiry .date-time, .child-detail .expiry .date-time {
+  display: flex;
+  justify-content: space-between;
+}
+
+.details-page .expiry .date-time span, .child-detail .expiry .date-time span {
+  color: #1f1f1f;
+  padding: 0.5em 0 0.3em 0;
+  font-size: 1.1em;
+}

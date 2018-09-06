@@ -1,0 +1,44 @@
+import React from 'react';
+
+import {connect} from 'react-redux';
+import '../../styles/task-details.css';
+import { parentApproveTask, parentDenyTask } from '../../actions/tasks';
+import { toggleParentDetails } from '../../actions/toggles';
+
+const mapStateToProps = state => ({
+  taskDetail: state.toggles.chosenCard.details
+});
+
+export const ParentTaskDetails = props => {
+  // const dateExpired = new Date(Number(props.taskDetail.expiryDate));
+  return(
+    <section className='details-page'>
+      <div className='status'>{props.taskDetail.complete ? 
+        <span>Approved!</span> : props.taskDetail.childComplete ? 
+          <span>Waiting for your approval.</span> : props.taskDetail.denied ?
+            <span>Denied, waiting for child completion</span> : <span>Task sent</span>}
+      </div>
+      <div className='child-detail'>
+        <p className='name'>Name: <span>{props.taskDetail.name}</span></p>
+        <p className='points'>Points: <span>{props.taskDetail.pointValue}</span></p>
+      </div>
+      <div className='buttons'>
+        <div className='approval-btns'>
+          <button className='approve' disabled={!props.taskDetail.childComplete}
+            onClick={() => {
+              props.dispatch(parentApproveTask(props.taskDetail.id));
+              props.dispatch(toggleParentDetails());
+            }}>Approve</button>
+          <button className='deny' disabled={props.taskDetail.complete}
+            onClick={() => {
+              props.dispatch(parentDenyTask(props.taskDetail.id));
+              props.dispatch(toggleParentDetails());
+            }
+            }>Deny</button>
+        </div>
+      </div>  
+    </section>
+  );
+};
+
+export default connect(mapStateToProps)(ParentTaskDetails);

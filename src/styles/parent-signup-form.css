@@ -1,0 +1,72 @@
+.parent-signup-form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: -3.5em auto 0 auto;
+  background-color: white;
+  /* padding: 1.5em; */
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px#404d48;
+}
+
+.parent-signup-form .parent-form-heading {
+  background-color:  #006060 ;
+  width: 100%;
+  padding: 0.7em 0;
+  margin: 1em 0;
+  color: white;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.parent-form-body {
+  padding: 0.5em 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.parent-form-body input {
+  width: 95%;
+  margin-bottom: 0.5em;
+  font-size: 1.1em;
+  padding: 0.2em;
+  text-align: left;
+  border: none;
+  border-bottom:  #006060  1px inset;
+}
+
+.parent-form-body label {
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+  text-transform: capitalize;
+  text-align: left;
+  color:  #006060;
+}
+
+.parent-form-body .parent-signup-btn {
+  color: #006060 ;
+  width: 20%;
+  margin: 0.8em 0 0 auto;
+  font-size: 1em;
+}
+
+
+@media screen and (min-width: 450px){
+}
+
+@media screen and (min-width: 550px){
+}
+
+@media screen and (min-width: 650px){
+}
+
+@media screen and (min-width: 750px){
+  .parent-signup-form{
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 950px){
+
+}
